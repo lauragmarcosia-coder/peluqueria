@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Tetrix</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game-wrapper">
+
+  <aside class="panel panel-left">
+    <div class="box">
+      <h3>PUNTOS</h3>
+      <div class="score" id="score">0</div>
+    </div>
+    <div class="box">
+      <h3>LÍNEAS</h3>
+      <div class="score" id="lines">0</div>
+    </div>
+    <div class="box">
+      <h3>NIVEL</h3>
+      <div class="score" id="level">1</div>
+    </div>
+    <div class="box hold-box">
+      <h3>RESERVA</h3>
+      <canvas id="hold-canvas" width="120" height="120"></canvas>
+    </div>
+  </aside>
+
+  <main class="board-area">
+    <div class="frame">
+      <canvas id="board" width="300" height="600"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="overlay-card">
+          <h1 id="overlay-title">TETRIX</h1>
+          <p id="overlay-text">Pulsa INICIAR para jugar</p>
+          <button id="start-btn">INICIAR</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="panel panel-right">
+    <div class="box">
+      <h3>SIGUIENTES</h3>
+      <canvas id="next-canvas" width="120" height="360"></canvas>
+    </div>
+  </aside>
+
+</div>
+
+<div class="controls-bar">
+  <button id="btn-start">INICIAR / REINICIAR</button>
+  <button id="btn-pause">PAUSA</button>
+  <button id="btn-sound">SONIDO: ON</button>
+</div>
+
+<div class="help">
+  <h4>CONTROLES</h4>
+  <p>
+    <kbd>←</kbd> <kbd>→</kbd> mover &nbsp;•&nbsp;
+    <kbd>↓</kbd> caída suave &nbsp;•&nbsp;
+    <kbd>↑</kbd> / <kbd>X</kbd> rotar &nbsp;•&nbsp;
+    <kbd>Z</kbd> rotar inverso &nbsp;•&nbsp;
+    <kbd>Espacio</kbd> caída rápida &nbsp;•&nbsp;
+    <kbd>C</kbd> reservar &nbsp;•&nbsp;
+    <kbd>P</kbd> pausa &nbsp;•&nbsp;
+    <kbd>R</kbd> reiniciar
+  </p>
+</div>
+
+<div class="touch-pad">
+  <button data-key="left">◀</button>
+  <button data-key="rotate">⟳</button>
+  <button data-key="right">▶</button>
+  <button data-key="down">▼</button>
+  <button data-key="drop">⤓</button>
+  <button data-key="hold">⇄</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
